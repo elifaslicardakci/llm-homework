@@ -1,6 +1,7 @@
 """Accuracy, out-of-scope recall, threshold tuning and latency for all models."""
 import json
 import platform
+import re
 import time
 
 import numpy as np
@@ -95,6 +96,6 @@ def evaluate_model(model: IntentModel, val, test, extra: dict | None = None) -> 
     }
     out = REPORTS_DIR / "results"
     out.mkdir(parents=True, exist_ok=True)
-    slug = model.name.lower().replace(" ", "_").replace("+", "").replace("__", "_")
+    slug = re.sub(r"[^a-z0-9]+", "_", model.name.lower()).strip("_")
     (out / f"{slug}.json").write_text(json.dumps(result, indent=2))
     return result

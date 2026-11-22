@@ -1,0 +1,37 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+W1122 21:24:36.581000 18744 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7601.14it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: bert-base-multilingual-cased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+classifier.weight                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+device mps · 15510 train messages · 155 intents · 1455 steps
+epoch 1 step 100/485 loss 4.9872
+epoch 1 step 200/485 loss 4.6067
+epoch 1 step 300/485 loss 4.0785
+epoch 1 step 400/485 loss 3.6015
+epoch 1 done in 247s · train loss 3.2509 · val accuracy 0.8270
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:02<00:00,  2.56s/it]Writing model shards: 100%|██████████| 1/1 [00:02<00:00,  2.57s/it]
+saved best model to /Users/elifesma/Desktop/Projects/llm_asli/models/bert_teacher
+epoch 2 step 100/485 loss 1.1095
+epoch 2 step 200/485 loss 0.9752
+epoch 2 step 300/485 loss 0.8756
+epoch 2 step 400/485 loss 0.7947
+epoch 2 done in 293s · train loss 0.7344 · val accuracy 0.9076
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.07s/it]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.07s/it]
+saved best model to /Users/elifesma/Desktop/Projects/llm_asli/models/bert_teacher
+epoch 3 step 100/485 loss 0.3189
+epoch 3 step 200/485 loss 0.2917
+epoch 3 step 300/485 loss 0.2738
