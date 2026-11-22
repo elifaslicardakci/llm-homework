@@ -1,0 +1,29 @@
+{
+  "train": {
+    "messages": 15310,
+    "intents": 155,
+    "oos": 250,
+    "appliance": 60,
+    "turkish": 28,
+    "mean_words": 8.3,
+    "p95_words": 14
+  },
+  "val": {
+    "messages": 3116,
+    "intents": 155,
+    "oos": 100,
+    "appliance": 16,
+    "turkish": 8,
+    "mean_words": 8.3,
+    "p95_words": 15
+  },
+  "test": {
+    "messages": 5524,
+    "intents": 155,
+    "oos": 1000,
+    "appliance": 24,
+    "turkish": 12,
+    "mean_words": 8.3,
+    "p95_words": 14
+  }
+}

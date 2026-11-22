@@ -1,0 +1,101 @@
+text,intent,lang
+bulaşık makinem su boşaltmıyor model DW-6534,appliance_fault,tr
+çamaşır makinesi sıkma yaparken çok ses çıkarıyor WM-8120,appliance_fault,tr
+buzdolabım soğutmuyor içi ılık,appliance_fault,tr
+fırın ısınmıyor ekranda E3 hatası var,appliance_fault,tr
+kurutma makinesi çalışıyor ama kurutmuyor,appliance_fault,tr
+bulaşık makinesinden su sızıyor yerler ıslandı,appliance_fault,tr
+çamaşır makinesi kapağı açılmıyor program bitti,appliance_fault,tr
+derin dondurucu sürekli buz yapıyor DF-3300,appliance_fault,tr
+makine açılmıyor hiç ışık yanmıyor,appliance_fault,tr
+bulaşıklar temiz çıkmıyor deterjan kalıyor,appliance_fault,tr
+klima uzaktan kumandaya tepki vermiyor AC-1290,appliance_fault,tr
+ocak gözlerinden biri yanmıyor,appliance_fault,tr
+my dishwasher will not drain model DW-6534,appliance_fault,en
+the washing machine is very loud during the spin cycle,appliance_fault,en
+fridge stopped cooling everything is warm,appliance_fault,en
+oven does not heat up and shows error E3,appliance_fault,en
+dryer runs but clothes are still wet,appliance_fault,en
+water is leaking from under the dishwasher,appliance_fault,en
+washer door stays locked after the cycle ends,appliance_fault,en
+freezer keeps building up ice DF-3300,appliance_fault,en
+the machine will not turn on at all,appliance_fault,en
+dishes come out dirty with detergent residue,appliance_fault,en
+air conditioner ignores the remote AC-1290,appliance_fault,en
+one burner on my cooktop will not ignite,appliance_fault,en
+the display on my washer keeps flashing an error code,appliance_fault,en
+garanti süresi içinde ücretsiz tamir yapılıyor mu,warranty_claim,tr
+cihazım garantide mi nasıl öğrenebilirim WM-8120,warranty_claim,tr
+garanti belgesini kaybettim ne yapmalıyım,warranty_claim,tr
+yeni aldığım buzdolabını iade etmek istiyorum,warranty_claim,tr
+ürün kutusundan hasarlı çıktı değişim istiyorum,warranty_claim,tr
+garantiyi uzatmak mümkün mü,warranty_claim,tr
+üç kez arızalandı yenisiyle değiştirin,warranty_claim,tr
+garanti kapsamında hangi parçalar var,warranty_claim,tr
+fatura olmadan garanti geçerli mi,warranty_claim,tr
+iade için kargo ücreti ödeyecek miyim,warranty_claim,tr
+garanti başvurumun durumu nedir,warranty_claim,tr
+ikinci el aldım garanti devam ediyor mu,warranty_claim,tr
+is my appliance still under warranty,warranty_claim,en
+i lost my warranty card what should i do,warranty_claim,en
+i want to return the fridge i bought last week,warranty_claim,en
+the product arrived damaged i need a replacement,warranty_claim,en
+can i extend my warranty,warranty_claim,en
+it broke three times please replace it with a new one,warranty_claim,en
+which parts are covered by the warranty,warranty_claim,en
+is the warranty valid without a receipt,warranty_claim,en
+do i pay shipping for a return,warranty_claim,en
+what is the status of my warranty claim,warranty_claim,en
+is the warranty transferable if i bought it used,warranty_claim,en
+will warranty repair be free of charge DW-6534,warranty_claim,en
+my order was damaged so i want a refund,warranty_claim,en
+bulaşık makinesi için yeni sepet sipariş etmek istiyorum,spare_parts_order,tr
+buzdolabı rafı kırıldı yedek parça var mı,spare_parts_order,tr
+çamaşır makinesi kapak contası nereden alınır WM-8120,spare_parts_order,tr
+fırın tepsisi ayrı satılıyor mu,spare_parts_order,tr
+su filtresini değiştirmem lazım hangisini almalıyım,spare_parts_order,tr
+kurutma makinesi tüy filtresi sipariş vermek istiyorum,spare_parts_order,tr
+klima kumandası kayboldu yenisini alabilir miyim AC-1290,spare_parts_order,tr
+ocak düğmesi kırıldı yedeğini satıyor musunuz,spare_parts_order,tr
+buzdolabı kapak kolu için parça numarası nedir,spare_parts_order,tr
+yedek parça siparişim ne zaman gelir,spare_parts_order,tr
+orijinal yedek parça fiyat listesi var mı,spare_parts_order,tr
+derin dondurucu çekmecesi çatladı,spare_parts_order,tr
+i want to order a new rack for my dishwasher,spare_parts_order,en
+the fridge shelf broke do you sell spare parts,spare_parts_order,en
+where can i buy a door seal for WM-8120,spare_parts_order,en
+is the oven tray sold separately,spare_parts_order,en
+which water filter do i need for my fridge,spare_parts_order,en
+i need to order a lint filter for the dryer,spare_parts_order,en
+i lost the remote for AC-1290 can i buy a new one,spare_parts_order,en
+a knob on my cooktop broke do you have a replacement,spare_parts_order,en
+what is the part number for the fridge door handle,spare_parts_order,en
+when will my spare part order arrive,spare_parts_order,en
+do you have a price list for original parts,spare_parts_order,en
+the freezer drawer cracked can i get a new drawer,spare_parts_order,en
+can i order a replacement hose for my washer,spare_parts_order,en
+yeni bulaşık makinem için kurulum randevusu almak istiyorum,installation_request,tr
+çamaşır makinesi montajı ücretli mi,installation_request,tr
+ankastre fırın kurulumu için teknisyen ne zaman gelir,installation_request,tr
+klima montajı için randevu alabilir miyim AC-1290,installation_request,tr
+kurulum randevumu ertelemek istiyorum,installation_request,tr
+taşındım makineyi yeni evde kurdurmak istiyorum,installation_request,tr
+ankastre ocak montajı yapıyor musunuz,installation_request,tr
+kurulum için evde olmam gerekiyor mu,installation_request,tr
+teslimatla birlikte kurulum yapılıyor mu,installation_request,tr
+kurulum ekibi gelmedi,installation_request,tr
+buzdolabını tezgah altına monte ettirmek istiyorum,installation_request,tr
+kurutma makinesini çamaşır makinesinin üstüne kurabilir misiniz,installation_request,tr
+i want to book an installation for my new dishwasher,installation_request,en
+is washing machine installation free,installation_request,en
+when will the technician come to install my built-in oven,installation_request,en
+can i schedule an installation for AC-1290,installation_request,en
+i need to reschedule my installation appointment,installation_request,en
+i moved house and need the washer installed again,installation_request,en
+do you install built-in cooktops,installation_request,en
+do i need to be at home for the installation,installation_request,en
+is installation included with delivery,installation_request,en
+the installation team never showed up,installation_request,en
+can you mount the fridge under the counter,installation_request,en
+can you stack the dryer on top of the washer,installation_request,en
+how long does a dishwasher installation take,installation_request,en
