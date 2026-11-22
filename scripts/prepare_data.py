@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from datasets import load_dataset
 
+from router.preprocessing.normalize import KNOWN_WORDS_FILE, normalize
 from router.teams import OOS, RESOURCES, domain_of, team_of
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -67,8 +68,17 @@ def main() -> None:
             "p95_words": int(n_words.quantile(0.95)),
         }
         print(name, stats[name])
+        if name == "train":
+            write_known_words(df["text"])
     (ROOT / "reports" / "data_stats.json").write_text(json.dumps(stats, indent=2))
     plot(stats)
+
+
+def write_known_words(texts: pd.Series) -> None:
+    """Training vocabulary: the product-name corrector never changes these words."""
+    words = {w for t in texts for w in normalize(t, correct=False).split()}
+    KNOWN_WORDS_FILE.write_text("\n".join(sorted(words)) + "\n", encoding="utf-8")
+    print("known words:", len(words))
 
 
 def plot(stats: dict) -> None:
