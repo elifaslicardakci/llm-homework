@@ -1,0 +1,23 @@
+C=3   val in-scope accuracy 0.9161
+C=10  val in-scope accuracy 0.9211
+C=30  val in-scope accuracy 0.9234
+C=100 val in-scope accuracy 0.9204
+{
+  "threshold": 0.56,
+  "test": {
+    "accuracy": 0.8674873280231716,
+    "in_scope_accuracy": 0.8603006189213086,
+    "oos_recall": 0.9,
+    "oos_precision": 0.6392045454545454,
+    "macro_f1": 0.8897515772127166,
+    "team_accuracy": 0.8848660391020999,
+    "appliance_accuracy": 0.5
+  },
+  "size_mb": 67.56,
+  "latency": {
+    "mean_ms": 0.5925196026995158,
+    "p50_ms": 0.5743750080000609,
+    "p95_ms": 0.7429374949424533,
+    "n_runs": 300
+  }
+}

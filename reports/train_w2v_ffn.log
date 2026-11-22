@@ -1,0 +1,32 @@
+Exception ignored in: 'gensim.models.word2vec_inner.our_dot_float'
+/Users/elifesma/Desktop/Projects/llm_asli/src/router/models/w2v_ffn.py:91: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:214.)
+  xt, yt = torch.from_numpy(x_train), torch.from_numpy(y_train)
+word2vec: 5472 words, dim 100
+nearest to 'dishwasher': ['microwave', 'cooktop', 'faulty', 'dryer', 'refund']
+epoch   1  train loss 3.2880  val acc 0.6698
+epoch  10  train loss 0.3485  val acc 0.8482
+epoch  20  train loss 0.2302  val acc 0.8675
+epoch  30  train loss 0.1721  val acc 0.8726
+epoch  40  train loss 0.1257  val acc 0.8761
+epoch  50  train loss 0.1076  val acc 0.8784
+epoch  60  train loss 0.0917  val acc 0.8774
+best val acc 0.8800
+{
+  "threshold": 0.79,
+  "test": {
+    "accuracy": 0.8186097031136857,
+    "in_scope_accuracy": 0.8112290008841733,
+    "oos_recall": 0.852,
+    "oos_precision": 0.5550488599348534,
+    "macro_f1": 0.8439676878745166,
+    "team_accuracy": 0.8421433743664012,
+    "appliance_accuracy": 0.20833333333333334
+  },
+  "size_mb": 2.55,
+  "latency": {
+    "mean_ms": 0.049136900051962584,
+    "p50_ms": 0.048729489208199084,
+    "p95_ms": 0.06142645870568231,
+    "n_runs": 300
+  }
+}

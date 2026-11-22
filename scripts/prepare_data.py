@@ -2,7 +2,8 @@
 
 CLINC150 keeps its official train / validation / test splits. The 100 appliance
 examples (25 per intent, Turkish and English) are split per intent and language
-into 15 train / 4 validation / 6 test.
+into 15 train / 4 validation / 6 test. Template-generated appliance messages
+(router.augment) are added to the training split only.
 """
 import json
 from pathlib import Path
@@ -11,6 +12,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from datasets import load_dataset
 
+from router.augment import augment
 from router.preprocessing.normalize import KNOWN_WORDS_FILE, normalize
 from router.teams import OOS, RESOURCES, domain_of, team_of
 
@@ -52,7 +54,10 @@ def main() -> None:
     clinc, domain = load_clinc(), split_domain_examples()
     stats = {}
     for name in ["train", "val", "test"]:
-        df = pd.concat([clinc[name], domain[name]], ignore_index=True)
+        parts = [clinc[name], domain[name]]
+        if name == "train":
+            parts.append(pd.DataFrame(augment()))
+        df = pd.concat(parts, ignore_index=True)
         df = df.sample(frac=1, random_state=SEED).reset_index(drop=True)
         df["domain"] = df["intent"].map(domain_of)
         df["team"] = df["intent"].map(team_of)
@@ -63,6 +68,7 @@ def main() -> None:
             "intents": int(df["intent"].nunique()),
             "oos": int((df["intent"] == OOS).sum()),
             "appliance": int((df["source"] == "appliance").sum()),
+            "appliance_augmented": int((df["source"] == "appliance_aug").sum()),
             "turkish": int((df["lang"] == "tr").sum()),
             "mean_words": round(float(n_words.mean()), 1),
             "p95_words": int(n_words.quantile(0.95)),
@@ -84,13 +90,13 @@ def write_known_words(texts: pd.Series) -> None:
 def plot(stats: dict) -> None:
     names = list(stats)
     fig, ax = plt.subplots(figsize=(7, 3.5))
-    in_scope = [stats[n]["messages"] - stats[n]["oos"] - stats[n]["appliance"] for n in names]
+    appliance = [stats[n]["appliance"] + stats[n]["appliance_augmented"] for n in names]
     oos = [stats[n]["oos"] for n in names]
-    appliance = [stats[n]["appliance"] for n in names]
+    in_scope = [stats[n]["messages"] - o - a for n, o, a in zip(names, oos, appliance)]
     ax.bar(names, in_scope, label="CLINC150 in-scope", color="#4C72B0")
     ax.bar(names, oos, bottom=in_scope, label="Out-of-scope", color="#DD8452")
     bottom = [a + b for a, b in zip(in_scope, oos)]
-    ax.bar(names, appliance, bottom=bottom, label="Appliance (TR + EN)", color="#55A868")
+    ax.bar(names, appliance, bottom=bottom, label="Appliance (TR + EN, train incl. templates)", color="#55A868")
     ax.set_ylabel("Messages")
     ax.set_title("Data splits")
     ax.legend(frameon=False)

@@ -188,6 +188,7 @@ accepted
 accepts
 access
 accessing
+accessories
 accidentally
 accnt
 accommodate
@@ -279,8 +280,10 @@ airplane
 airport
 airwaiys
 ajar
+aksesuarı
 al
 alabama
+alabilirim
 alan
 alarm
 alarms
@@ -289,6 +292,7 @@ alba
 albertsons
 albuquerque
 alcohol
+aldığım
 ale
 alert
 alerts
@@ -460,6 +464,8 @@ artificial
 artist
 aruba
 arufflo
+arıza
+arızalı
 as
 asada
 asap
@@ -472,6 +478,7 @@ ask
 asked
 asking
 asparagus
+aspiratör
 aspire
 assagios
 assets
@@ -585,6 +592,7 @@ battery
 bauer
 bay
 başvurumun
+başvurusu
 bb
 bbc
 bbq
@@ -616,6 +624,7 @@ behalf
 behind
 being
 beirut
+belgesi
 belgesini
 belgium
 believe
@@ -652,8 +661,10 @@ billed
 billing
 bills
 billy
+bir
 birchman
 bird
+birden
 birds
 birlikte
 birth
@@ -661,6 +672,7 @@ birthday
 birthdays
 birthplace
 bit
+bitiyor
 bjs
 black
 blackberry
@@ -721,6 +733,7 @@ bowl
 box
 boyfriend
 boys
+bozuldu
 boşaltmıyor
 brad
 bradley
@@ -1175,6 +1188,7 @@ consists
 constructed
 consume
 consumed
+conta
 contact
 contacts
 contain
@@ -1402,6 +1416,7 @@ deposited
 deposits
 depost
 depot
+derin
 describe
 design
 designation
@@ -1425,6 +1440,8 @@ developed
 device
 devon
 dew
+değişimi
+değiştirmek
 dgb
 dia
 diablo
@@ -1525,6 +1542,7 @@ dominos
 don
 donald
 donation
+dondurucu
 done
 donkeys
 donnobys
@@ -1579,6 +1597,7 @@ dump
 dumpster
 dunno
 duration
+durdu
 during
 durumu
 dusting
@@ -1587,6 +1606,7 @@ dvds
 dwarves
 dwight
 dylan
+düzgün
 e
 each
 earlier
@@ -1813,6 +1833,7 @@ fat
 father
 fatted
 fatura
+faulty
 favor
 favorite
 favourite
@@ -1867,6 +1888,7 @@ filp
 filter
 filters
 filtresi
+filtresini
 fin
 final
 finally
@@ -1891,6 +1913,7 @@ fix
 fixed
 fixing
 fiyat
+fiyatı
 fl
 flamingos
 flange
@@ -2024,9 +2047,11 @@ ganola
 garage
 garanti
 garantide
+garantisi
 garantiyi
 garbage
 garden
+garip
 garlic
 garment
 gary
@@ -2196,6 +2221,7 @@ harmful
 harrisburg
 hartford
 has
+hata
 hatteras
 hault
 havana
@@ -2286,6 +2312,7 @@ honey
 hong
 honolulu
 honor
+hood
 hook
 hooked
 hop
@@ -2339,6 +2366,7 @@ hy
 hyperactive
 i
 iade
+iadesi
 ice
 iceberg
 iceland
@@ -2589,12 +2617,14 @@ just
 justice
 justin
 k
+kadar
 kai
 kalıyor
 kaneohe
 kansas
 kapak
 kapolei
+kapsamında
 kara
 kargo
 kath
@@ -2604,7 +2634,9 @@ katmandu
 katy
 kaya
 kaybettim
+kayboldu
 kayla
+kaçırıyor
 kbc
 keep
 keeps
@@ -2644,6 +2676,7 @@ known
 knows
 koa
 kobe
+kodu
 kohls
 kolu
 kong
@@ -2659,6 +2692,7 @@ krugerrands
 krystine
 kumandaya
 kurdurmak
+kurulmalı
 kurulum
 kurulumu
 kurus
@@ -2714,6 +2748,7 @@ lawyer
 lawyers
 lax
 lay
+lazım
 lb
 league
 leaking
@@ -3014,6 +3049,7 @@ melting
 member
 memphis
 mendy
+menteşesi
 mention
 merci
 mercury
@@ -3050,6 +3086,7 @@ might
 mike
 mikes
 mikey
+mikrodalga
 milage
 milan
 mile
@@ -3181,6 +3218,7 @@ music
 musical
 must
 mustard
+musunuz
 mute
 mutual
 mutualone
@@ -3336,6 +3374,7 @@ obtain
 obtainable
 obtained
 obtaining
+ocak
 occupy
 occur
 occurred
@@ -3482,6 +3521,7 @@ paper
 papers
 paperwork
 paprika
+para
 paradox
 paragon
 paraguay
@@ -3503,6 +3543,7 @@ parties
 parts
 party
 parça
+parçası
 paso
 pass
 passat
@@ -3844,6 +3885,8 @@ raleigh
 rambunctious
 ran
 rancid
+randevu
+randevumu
 randevusu
 random
 randomly
@@ -3997,6 +4040,7 @@ requires
 requiring
 requisite
 rerservations
+reschedule
 rescind
 research
 reservation
@@ -4168,6 +4212,7 @@ sarasota
 sasha
 sat
 saturday
+satıyor
 sauce
 saudi
 saul
@@ -4578,6 +4623,7 @@ stored
 stovetop
 straight
 stranded
+strange
 strawberries
 strawberry
 street
@@ -4749,6 +4795,7 @@ tehran
 tehre
 tei
 teknisyen
+tekrar
 tel
 telepathy
 telephone
@@ -4998,6 +5045,7 @@ tunes
 turkey
 turn
 turned
+turning
 turns
 turtles
 tuscon
@@ -5132,6 +5180,7 @@ venue
 verification
 verify
 verisimilitude
+veriyor
 verizon
 vermek
 vermiyor
@@ -5341,8 +5390,12 @@ ya
 yaeji
 yakamoto
 yanmıyor
+yapar
 yaparken
+yapmak
 yapmalıyım
+yaptı
+yapılır
 yapılıyor
 yards
 ybor
@@ -5358,6 +5411,7 @@ yellow
 yelp
 yen
 yeni
+yenisini
 yens
 yep
 yerler
@@ -5403,6 +5457,7 @@ zombie
 zone
 zoo
 zulu
+çalışmıyor
 çamaşır
 çok
 çıkarıyor

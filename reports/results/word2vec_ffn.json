@@ -1,0 +1,40 @@
+{
+  "model": "word2vec + FFN",
+  "threshold": 0.79,
+  "val": {
+    "accuracy": 0.8122593068035944,
+    "in_scope_accuracy": 0.8093501326259946,
+    "oos_recall": 0.9,
+    "oos_precision": 0.1559792027729636,
+    "macro_f1": 0.8529079709849547,
+    "team_accuracy": 0.8334403080872914
+  },
+  "test": {
+    "accuracy": 0.8186097031136857,
+    "in_scope_accuracy": 0.8112290008841733,
+    "oos_recall": 0.852,
+    "oos_precision": 0.5550488599348534,
+    "macro_f1": 0.8439676878745166,
+    "team_accuracy": 0.8421433743664012,
+    "appliance_accuracy": 0.20833333333333334
+  },
+  "size_mb": 2.55,
+  "latency": {
+    "mean_ms": 0.049136900051962584,
+    "p50_ms": 0.048729489208199084,
+    "p95_ms": 0.06142645870568231,
+    "n_runs": 300
+  },
+  "hardware": {
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.0",
+    "torch_threads": 4
+  },
+  "word2vec": {
+    "dim": 100,
+    "sg": 1,
+    "window": 5,
+    "vocab": 5472
+  }
+}
