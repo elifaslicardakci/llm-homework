@@ -43,8 +43,8 @@ def main() -> None:
     df.to_csv(REPORTS_DIR / "results_table.csv", index=False)
     hw = json.loads((REPORTS_DIR / "results" / f"{ORDER[0][0]}.json").read_text())["hardware"]
     md = (f"Test set: 5,524 messages (CLINC150 plus test incl. 1,000 out-of-scope + 24 hand-written "
-          f"appliance messages). Latency: single-message calls, mean of 300, CPU "
-          f"({hw['processor']}, Python {hw['python']}).\n\n" + df.to_markdown(index=False) + "\n")
+          f"appliance messages). Latency: single-message calls, mean of 300, Apple M2 CPU "
+          f"(macOS {hw['machine']}, Python {hw['python']}).\n\n" + df.astype(object).where(df.notna(), "–").to_markdown(index=False) + "\n")
     (REPORTS_DIR / "results_table.md").write_text(md)
     print(md)
 

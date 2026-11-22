@@ -1,0 +1,34 @@
+{
+  "model": "mBERT student 4L \u00b7 INT8 \u00b7 ONNX \u00b7 1 thread",
+  "threshold": 0.74,
+  "val": {
+    "accuracy": 0.8616816431322208,
+    "in_scope_accuracy": 0.85842175066313,
+    "oos_recall": 0.96,
+    "oos_precision": 0.20382165605095542,
+    "macro_f1": 0.894209764477617,
+    "team_accuracy": 0.8738767650834403
+  },
+  "test": {
+    "accuracy": 0.8644098479362781,
+    "in_scope_accuracy": 0.8572060123784262,
+    "oos_recall": 0.897,
+    "oos_precision": 0.6122866894197952,
+    "macro_f1": 0.8889552445212614,
+    "team_accuracy": 0.8752715423606082,
+    "appliance_accuracy": 0.4583333333333333
+  },
+  "size_mb": 124.63,
+  "latency": {
+    "mean_ms": 3.0038652197496654,
+    "p50_ms": 2.7128539950354025,
+    "p95_ms": 4.439012138755065,
+    "n_runs": 300
+  },
+  "hardware": {
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.0",
+    "torch_threads": 4
+  }
+}

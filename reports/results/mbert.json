@@ -1,0 +1,36 @@
+{
+  "model": "mBERT",
+  "threshold": 0.6,
+  "val": {
+    "accuracy": 0.8408215661103979,
+    "in_scope_accuracy": 0.8388594164456233,
+    "oos_recall": 0.9,
+    "oos_precision": 0.17341040462427745,
+    "macro_f1": 0.8609248233997443,
+    "team_accuracy": 0.8575096277278562
+  },
+  "test": {
+    "accuracy": 0.8463070238957278,
+    "in_scope_accuracy": 0.8381962864721485,
+    "oos_recall": 0.883,
+    "oos_precision": 0.5805391190006575,
+    "macro_f1": 0.8543578942958903,
+    "team_accuracy": 0.861151339608979,
+    "appliance_accuracy": 0.0
+  },
+  "size_mb": 714.84,
+  "latency": {
+    "mean_ms": 21.739094130753074,
+    "p50_ms": 21.568854004726745,
+    "p95_ms": 22.762371150020044,
+    "n_runs": 300
+  },
+  "hardware": {
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.0",
+    "torch_threads": 4
+  },
+  "base_model": "bert-base-multilingual-cased",
+  "max_len": 32
+}

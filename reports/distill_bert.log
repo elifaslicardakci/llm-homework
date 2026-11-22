@@ -1,0 +1,46 @@
+W1122 21:48:34.889000 20807 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 14239.35it/s]
+teacher 178.0M params · student 121.3M params
+teacher val accuracy 0.9076
+student val accuracy before distillation 0.0231
+epoch 1 step 100/485 loss 2.2659
+epoch 1 step 200/485 loss 1.5917
+epoch 1 step 300/485 loss 1.2488
+epoch 1 step 400/485 loss 1.0444
+epoch 1 done in 224s · loss 0.9280 · val accuracy 0.8771
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  2.65it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  2.64it/s]
+saved best student to /Users/elifesma/Desktop/Projects/llm_asli/models/bert_student
+epoch 2 step 100/485 loss 0.2691
+epoch 2 step 200/485 loss 0.2581
+epoch 2 step 300/485 loss 0.2549
+epoch 2 step 400/485 loss 0.2458
+epoch 2 done in 207s · loss 0.2388 · val accuracy 0.9146
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.39s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.39s/it]
+saved best student to /Users/elifesma/Desktop/Projects/llm_asli/models/bert_student
+epoch 3 step 100/485 loss 0.1595
+epoch 3 step 200/485 loss 0.1533
+epoch 3 step 300/485 loss 0.1529
+epoch 3 step 400/485 loss 0.1506
+epoch 3 done in 214s · loss 0.1499 · val accuracy 0.9214
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.46s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.46s/it]
+saved best student to /Users/elifesma/Desktop/Projects/llm_asli/models/bert_student
+Loading weights:   0%|          | 0/73 [00:00<?, ?it/s]Loading weights: 100%|██████████| 73/73 [00:00<00:00, 5505.33it/s]
+{
+  "threshold": 0.72,
+  "test": {
+    "accuracy": 0.8698406951484432,
+    "in_scope_accuracy": 0.8651635720601237,
+    "oos_recall": 0.891,
+    "oos_precision": 0.6296819787985866,
+    "macro_f1": 0.892573018988792,
+    "team_accuracy": 0.8819695872556119,
+    "appliance_accuracy": 0.4583333333333333
+  },
+  "size_mb": 488.02,
+  "latency": {
+    "mean_ms": 11.22314400379158,
+    "p50_ms": 10.400187486084178,
+    "p95_ms": 15.587415268237237,
+    "n_runs": 300
+  }
+}

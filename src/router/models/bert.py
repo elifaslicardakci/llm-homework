@@ -30,8 +30,8 @@ class BertIntentModel(IntentModel):
         self.device = device
         cfg = self.model.config
         labels = [cfg.id2label[i] for i in range(cfg.num_labels)]
-        super().__init__(labels, cfg.task_specific_params.get("threshold", 0.0)
-                         if threshold is None and cfg.task_specific_params else threshold or 0.0)
+        saved = (getattr(cfg, "task_specific_params", None) or {}).get("threshold", 0.0)
+        super().__init__(labels, saved if threshold is None else threshold)
 
     @torch.no_grad()
     def predict_proba(self, texts: list[str], batch_size: int = 64) -> np.ndarray:

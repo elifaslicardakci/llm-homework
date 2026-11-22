@@ -1,0 +1,86 @@
+WARNING:root:Please consider to run pre-processing before quantization. Refer to example: https://github.com/microsoft/onnxruntime-inference-examples/blob/main/quantization/image_classification/cpu/ReadMe.md 
+W1122 22:03:03.103000 21794 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+quantized /Users/elifesma/Desktop/Projects/llm_asli/models/bert_student/model_int8.onnx (121.7 MB)
+Loading weights:   0%|          | 0/73 [00:00<?, ?it/s]Loading weights: 100%|██████████| 73/73 [00:00<00:00, 14855.38it/s]
+model_fp32.onnx: max |Δp| vs PyTorch 0.0000 · argmax agreement 1.0000
+model_int8.onnx: max |Δp| vs PyTorch 0.1498 · argmax agreement 0.9922
+{
+  "model": "mBERT student 4L \u00b7 FP32 \u00b7 ONNX",
+  "threshold": 0.72,
+  "test": {
+    "accuracy": 0.8698406951484432,
+    "in_scope_accuracy": 0.8651635720601237,
+    "oos_recall": 0.891,
+    "oos_precision": 0.6296819787985866,
+    "macro_f1": 0.892573018988792,
+    "team_accuracy": 0.8819695872556119,
+    "appliance_accuracy": 0.4583333333333333
+  },
+  "size_mb": 488.1,
+  "latency": {
+    "mean_ms": 7.684389289837175,
+    "p50_ms": 6.843333496362902,
+    "p95_ms": 11.179569389787506,
+    "n_runs": 300
+  }
+}
+{
+  "model": "mBERT student 4L \u00b7 FP32 \u00b7 ONNX \u00b7 1 thread",
+  "threshold": 0.72,
+  "test": {
+    "accuracy": 0.8698406951484432,
+    "in_scope_accuracy": 0.8651635720601237,
+    "oos_recall": 0.891,
+    "oos_precision": 0.6296819787985866,
+    "macro_f1": 0.892573018988792,
+    "team_accuracy": 0.8819695872556119,
+    "appliance_accuracy": 0.4583333333333333
+  },
+  "size_mb": 488.1,
+  "latency": {
+    "mean_ms": 8.95610122999642,
+    "p50_ms": 7.983229006640613,
+    "p95_ms": 12.874216998170613,
+    "n_runs": 300
+  }
+}
+{
+  "model": "mBERT student 4L \u00b7 INT8 \u00b7 ONNX",
+  "threshold": 0.74,
+  "test": {
+    "accuracy": 0.8644098479362781,
+    "in_scope_accuracy": 0.8572060123784262,
+    "oos_recall": 0.897,
+    "oos_precision": 0.6122866894197952,
+    "macro_f1": 0.8889552445212614,
+    "team_accuracy": 0.8752715423606082,
+    "appliance_accuracy": 0.4583333333333333
+  },
+  "size_mb": 124.63,
+  "latency": {
+    "mean_ms": 1.7573726264527068,
+    "p50_ms": 1.6670420009177178,
+    "p95_ms": 2.5677170138806105,
+    "n_runs": 300
+  }
+}
+{
+  "model": "mBERT student 4L \u00b7 INT8 \u00b7 ONNX \u00b7 1 thread",
+  "threshold": 0.74,
+  "test": {
+    "accuracy": 0.8644098479362781,
+    "in_scope_accuracy": 0.8572060123784262,
+    "oos_recall": 0.897,
+    "oos_precision": 0.6122866894197952,
+    "macro_f1": 0.8889552445212614,
+    "team_accuracy": 0.8752715423606082,
+    "appliance_accuracy": 0.4583333333333333
+  },
+  "size_mb": 124.63,
+  "latency": {
+    "mean_ms": 3.0038652197496654,
+    "p50_ms": 2.7128539950354025,
+    "p95_ms": 4.439012138755065,
+    "n_runs": 300
+  }
+}

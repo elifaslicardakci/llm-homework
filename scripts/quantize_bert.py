@@ -3,12 +3,14 @@
 python scripts/quantize_bert.py [--skip-export]
 """
 import argparse
+import importlib
 import json
 
 import numpy as np
 import onnx
 import torch
 from onnxruntime.quantization import QuantType, quantize_dynamic
+from onnxruntime.quantization.quant_utils import add_infer_metadata
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 from router.data import load_split
@@ -34,7 +36,17 @@ def export() -> None:
     print(f"exported {FP32} ({FP32.stat().st_size / 1e6:.1f} MB)")
 
 
+def _infer_shapes_in_memory(model_path):
+    """ONNX Runtime writes a shape-inferred copy of the model to disk; do it in memory."""
+    model = onnx.shape_inference.infer_shapes(onnx.load(str(model_path)))
+    add_infer_metadata(model)
+    return model
+
+
 def quantize() -> None:
+    # the package attribute "quantize" is the function, so look the module up explicitly
+    ort_quantize = importlib.import_module("onnxruntime.quantization.quantize")
+    ort_quantize.load_model_with_shape_infer = _infer_shapes_in_memory
     quantize_dynamic(str(FP32), str(INT8), weight_type=QuantType.QInt8, per_channel=True)
     print(f"quantized {INT8} ({INT8.stat().st_size / 1e6:.1f} MB)")
 
@@ -68,6 +80,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if not args.skip_export:
         export()
-        quantize()
+    quantize()
     check_outputs()
     evaluate()
